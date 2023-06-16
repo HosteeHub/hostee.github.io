@@ -46,7 +46,7 @@ _G.DisplayDiamond = game:GetService("Players").LocalPlayer.leaderstats.Diamonds.
 _G.DisplayRap = game:GetService("Players").LocalPlayer.leaderstats.RAP.Value
 _G.DisplayBankTier = game:GetService("Players").LocalPlayer.PlayerGui.Bank.Frame.BankTitle.Tier.Text
 local GemsFormated = (require(game:GetService("ReplicatedStorage").Library.Functions.NumberShorten)( _G.DisplayDiamond ))
-local RapFormated = "0"
+local RapFormated = (require(game:GetService("ReplicatedStorage").Library.Functions.NumberShorten)( _G.DisplayRap ))
 local function sendwebhook(msg)
 local msg = {
 	["avatar_url"] = "https://cdn.discordapp.com/icons/1085872367831613471/a_55aaf60df3ca5b6ba8c7fc5401f3a1ba.gif?size=4096",
